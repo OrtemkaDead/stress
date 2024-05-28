@@ -22,8 +22,24 @@
   object-fit: cover;
 }
 
+.index-page__header {
+  display: flex;
+  align-items: center;
+}
+
 .index-page__header .header__nav {
-  width: 50%;
+  width: max-content;
+  margin-left: auto;
+}
+
+.index-page__header-logo {
+  display: flex;
+  align-items: center;
+
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45px;
+  cursor: pointer;
 }
 
 .index-page__container {
@@ -43,10 +59,13 @@
 }
 
 .welcome-block__title {
+  overflow: hidden;
+
   font-size: 96px;
   font-weight: 800;
   line-height: 120px;
   letter-spacing: 0.75em;
+  margin-right: -0.75em;
 
   color: #0000FF;
   background: linear-gradient(90deg, #098BE9 0%, #0E0EDD 100%);
@@ -166,4 +185,107 @@
   margin-right: 10px;
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 1000px) {
+  /* ? WELCOME BLOCK */
+  .welcome-block__title {
+    letter-spacing: 0.53em;
+    margin-right: -0.53em;
+  }
+
+  /* ? ABOUT BLOCK */
+  .about-block__background {
+    display: none;
+  }
+}
+
+@media (max-width: 730px) {
+  /* ? HEADER */
+  .index-page__header .index-page__header-logo {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .index-page__header .header__logo-icon {
+    width: 44px;
+    height: 28px;
+  }
+
+  .header__nav-button-sign-up {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* ? WELCOME BLOCK */
+  .welcome-block__title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 75px;
+  }
+  
+  .welcome-block__description {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .welcome-block__buttons-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .welcome-block__button-more-info {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* ? ABOUT BLOCK */
+  .about-block {
+    margin-top: 130px;
+  }
+
+  .about-block__text {
+    width: 400px;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+  .about-block__button {
+    padding: 14px 20px 14px 12px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    border-radius: 10px;
+  }
+
+  .about-block__button-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  /* ? WELCOME BLOCK */
+  .welcome-block__title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  
+  .welcome-block__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .welcome-block__button {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* ? ABOUT BLOCK */
+  .about-block__text {
+    width: 320px;
+  }
 }

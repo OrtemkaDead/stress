@@ -100,7 +100,7 @@ body {
 }
 
 .header__nav {
-  width: 70%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -284,5 +284,19 @@ body {
   .header__nav-link {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+@media (max-width: 430px) {
+  /* ? CONTAINER */
+  .container {
+    max-width: 350px;
+  }
+
+  /* ? BLOCK */
+  .block__description {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
   }
 }

@@ -1,12 +1,31 @@
+// ? ACTIVE ATTACKS
 const activeAttacksRows = document.querySelectorAll('.active-attacks__row');
 
-activeAttacksRows.forEach(element => {
-  const switchButton = element.lastElementChild.children[0];
+activeAttacksRows.forEach(row => {
+  const switchButton = row.querySelector('.active-attacks__switch-button');
 
   if (switchButton) {
     switchButton.addEventListener('click', () => {
-      element.classList.toggle('active-attacks__row--active');
-      switchButton.innerHTML = element.classList.contains('active-attacks__row--active') ? 'On' : 'Off';
+      row.classList.toggle('active-attacks__row--active');
+      switchButton.innerHTML = row.classList.contains('active-attacks__row--active') ? 'On' : 'Off';
     })
   }
+});
+
+// ? GRAPHS
+const graphsPopupButtons = document.querySelectorAll('.graphs__popup-button');
+const graphsPopupContent = document.querySelector('.graphs__popup-content');
+
+graphsPopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    graphsPopupContent.classList.toggle('graphs__popup-content--active');
+  })
+});
+
+const graphsPopupValues = document.querySelectorAll('.graphs__popup-value');
+
+graphsPopupValues.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('graphs__popup-value-checkbox--active');
+  })
 });
