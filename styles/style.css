@@ -265,3 +265,24 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 730px) {
+  /* ? CONTAINER */
+  .container {
+    max-width: 400px;
+  }
+
+  /* ? HEADER */
+  .header__controls-buttons {
+    display: none;
+  }
+
+  .header__logo {
+    justify-content: center;
+  }
+
+  .header__nav-link {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

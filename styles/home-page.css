@@ -337,3 +337,69 @@
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 730px) {
+  /* ? USER PANEL */
+  .user-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .user-panel__user-info {
+    margin-bottom: 10px;
+  }
+
+  .user-panel__user-info-text-wrapper {
+    justify-content: flex-start;
+  }
+
+  .user-panel__user-name {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .user-panel__user-rank {
+    margin-top: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .user-panel__info-wrapper {
+    margin-left: 0;
+  }
+
+  .user-panel__controls-buttons {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .user-panel__button {
+    padding: 11px;
+  }
+  
+  .user-panel__button-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ? ACTIVE ATTACKS */
+  .active-attacks {
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+  }
+
+  /* ? SERVICES */
+  .services__item {
+    width: 100%;
+  }
+
+  .services__item-name {
+    width: 50%;
+  }
+
+  .services__separator {
+    display: none;
+  }
+}
+
