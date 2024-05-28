@@ -1,0 +1,66 @@
+.attack-page {
+  padding: 100px 0 0;
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(50% 50% at 50% 50%, #03051C 0%, #030210 100%);
+}
+
+.attack-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.attack-panel__layer {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.attack-panel__layer:last-child {
+  margin-bottom: 0;
+}
+
+.attack-panel__layer-title {
+  min-width: max-content;
+  margin-right: 20px;
+
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #333353;
+}
+
+.attack-panel__layer-button {
+  margin-right: 20px;
+  padding: 10px 22px;
+
+  color: #333353;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+
+
+  background-color: #0A0A1E;
+  border-radius: 10px;
+  transition: all .3s;
+}
+
+.attack-panel__layer-button--active {
+  color: #FFFFFF;
+
+  background-color: #0E0EDD;
+}
+
+.attack-panel__layer-button--run-attack {
+  color: #FFFFFF;
+
+  background-color: #0E0EDD;
+}
+
+.attack-panel__layer-button--add-server {
+  color: #0E0EDD;
+
+  background-color: #FFFFFF;
+}
