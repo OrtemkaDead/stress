@@ -122,16 +122,20 @@
         </div>
 
         <div class="attack-panel">
-          <div class="attack-panel__layer">
+          <div class="attack-panel__layer" id="attack-panel-select-layer">
             <span class="attack-panel__layer-title">Select Layer</span>
-            <button class="attack-panel__layer-button">1</button>
-            <button class="attack-panel__layer-button">2</button>
-            <button class="attack-panel__layer-button">3</button>
-            <button
-              class="attack-panel__layer-button attack-panel__layer-button--active"
-            >
-              4
-            </button>
+
+            <div class="attack-panel__layer-content">
+              <button class="attack-panel__layer-button">1</button>
+              <button class="attack-panel__layer-button">2</button>
+              <button class="attack-panel__layer-button">3</button>
+              <button
+                class="attack-panel__layer-button attack-panel__layer-button--active"
+              >
+                4
+              </button>
+            </div>
+
             <button
               class="attack-panel__layer-button attack-panel__layer-button--run-attack"
             >
@@ -139,21 +143,19 @@
             </button>
           </div>
 
-          <div class="attack-panel__layer">
+          <div class="attack-panel__layer" id="attack-panel-select-server">
             <span class="attack-panel__layer-title">Select Server</span>
+
+            <input
+              class="attack-panel__layer-search-input"
+              type="text"
+              placeholder="Search"
+            />
+            <div class="attack-panel__layer-separator"></div>
+
             <button class="attack-panel__layer-button">PentagonCom</button>
             <button class="attack-panel__layer-button">PentagonCom</button>
-            <button class="attack-panel__layer-button">PentagonCom</button>
-            <button class="attack-panel__layer-button">PentagonCom</button>
-            <button class="attack-panel__layer-button">PentagonCom</button>
-            <button class="attack-panel__layer-button">PentagonCom</button>
-            <button class="attack-panel__layer-button">PentagonCom</button>
-            <button
-              class="attack-panel__layer-button attack-panel__layer-button--active"
-            >
-              PentagonCom
-            </button>
-            <button class="attack-panel__layer-button">PentagonCom</button>
+
             <button
               class="attack-panel__layer-button attack-panel__layer-button--add-server"
             >
@@ -447,6 +449,14 @@
       </div>
     </main>
 
-    <script src="./scripts.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/mock-data.js"></script>
+    <script src="./scripts/active-attacks.js"></script>
+    <script src="./scripts/attack-panel.js"></script>
+    <script src="./scripts/denis.js"></script>
   </body>
 </html>

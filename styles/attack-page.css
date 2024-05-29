@@ -7,24 +7,23 @@
 }
 
 .attack-panel {
+  margin-bottom: -20px;
   display: flex;
   flex-direction: column;
 }
 
 .attack-panel__layer {
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.attack-panel__layer:last-child {
-  margin-bottom: 0;
+.attack-panel__layer-content {
+  display: flex;
 }
 
 .attack-panel__layer-title {
   min-width: max-content;
-  margin-right: 20px;
 
   font-size: 24px;
   font-weight: 300;
@@ -33,14 +32,13 @@
 }
 
 .attack-panel__layer-button {
-  margin-right: 20px;
+  width: max-content;
   padding: 10px 22px;
 
   color: #333353;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
-
 
   background-color: #0A0A1E;
   border-radius: 10px;
@@ -63,4 +61,61 @@
   color: #0E0EDD;
 
   background-color: #FFFFFF;
+}
+
+@media (hover: hover) {
+  .attack-panel__layer-button:not(.attack-panel__layer-button--active):hover {
+    color: #0E0EDD;
+    background-color: #FFFFFF;
+  }
+
+  .attack-panel__layer-button--add-server:hover {
+    color: #FFFFFF;
+    background-color: #0E0EDD;
+  }
+}
+
+.attack-panel__layer-search-input {
+  padding: 10px 22px;
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #FFFFFF;
+
+  border-radius: 10px;
+  border: 1px solid #333353;
+  background-color: #0A0A1E;
+}
+
+.attack-panel__layer-separator {
+  width: 1px;
+  height: 44px;
+
+  background-color: #2C2C56;
+}
+
+/* ? Задаю тут марджины типо gap всем нужным блокам */
+.attack-panel__layer-title,
+.attack-panel__layer-button,
+.attack-panel__layer-search-input,
+.attack-panel__layer-separator {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* ? RESPONSIVE */
+@media (max-width: 430px) {
+  .attack-panel__layer-button {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .attack-panel__layer-title,
+  .attack-panel__layer-button,
+  .attack-panel__layer-search-input,
+  .attack-panel__layer-separator {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
 }

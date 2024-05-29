@@ -21,6 +21,32 @@ textarea {
   color: inherit;
   border: 0;
 }
+/* do not group these rules */
+*::-webkit-input-placeholder {
+  color: inherit;
+}
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: inherit;
+  opacity: 1;
+}
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: inherit;
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: inherit;
+}
+*::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: inherit;
+}
+*::placeholder {
+  /* modern browser */
+  color: inherit;
+}
 button {
   cursor: pointer;
   background-color: inherit;
@@ -415,6 +441,9 @@ body {
 /* ? SERVICES */
 .services {
   display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: -20px;
 }
 
 .services__separator {
@@ -422,7 +451,7 @@ body {
   min-height: 72px;
   height: 100%;
 
-  margin: 0 20px;
+  /* margin: 0 20px; */
   width: 1px;
   background-color: #2C2C56;
 }
@@ -434,6 +463,12 @@ body {
   font-size: 24px;
   font-weight: 300;
   line-height: 30px;
+}
+
+.services__item,
+.services__separator {
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .services__item-name {
@@ -547,11 +582,6 @@ body {
   .active-attacks {
     grid-template-columns: 1fr 1fr 1fr 0.5fr;
   }
-
-  /* ? SERVICES */
-  .services {
-    flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -584,11 +614,6 @@ body {
   /* ? USER PANEL */
   .user-panel__controls-buttons {
     display: none;
-  }
-
-  /* ? SERVICES */
-  .services__item {
-    margin-bottom: 20px;
   }
 }
 
